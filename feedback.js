@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('feedbackForm');
     const emailField = document.getElementById('email');
-    const userNameInput = document.getElementById('name');
-    const userNamePlaceholder = document.getElementById('userNamePlaceholder');
+    const nameInput = document.getElementById('name');
+    const successMessage = document.getElementById('successMessage');
     
     if (form) {
         // Валидация email при вводе
@@ -20,8 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
             event.stopPropagation();
             
             if (form.checkValidity()) {
-                // Устанавливаем имя пользователя в модальное окно
-                userNamePlaceholder.textContent = userNameInput.value.trim() || 'пользователь';
+                // Устанавливаем имя в сообщение
+                const userName = nameInput.value.trim();
+                if (userName) {
+                    successMessage.innerHTML = `Спасибо, <strong>${userName}</strong>!`;
+                } else {
+                    successMessage.textContent = "Спасибо!";
+                }
                 
                 // Показываем модальное окно
                 const modal = new bootstrap.Modal(document.getElementById('successModal'));
@@ -34,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Показываем ошибки
                 form.classList.add('was-validated');
                 
-                // Особенная проверка для email
                 if (emailField.validity.patternMismatch) {
                     emailField.nextElementSibling.textContent = "Введите корректный адрес email";
                 }
