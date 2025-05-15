@@ -1,30 +1,141 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обучение языку программирования HTML</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML & CSS School – Обучение программированию</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Общие стили -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>LearningHTML</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">Обо мне</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>О сайте</h2>
-            <p>Меня зовут Данил и я обучаю людей писать код на языках программирования HTML и CSS. Всего за 2500 рублей в месяц вы сможете освоить HTML и CSS. В вашем доступе будут прошедшие вебинары и домашние задания. Присоединяйся к нашей команде! </p>
-            <img src="html_css.jpg" alt="Пример изображения" class="image">
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 LearningHTML</p>
-    </footer>
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-code-slash me-2"></i>HTML & CSS School
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html"><i class="bi bi-house-door me-1"></i> Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html"><i class="bi bi-envelope me-1"></i> Обратная связь</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Герой-секция -->
+  <section class="hero-section mb-5">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold mb-4">Начни изучать HTML и CSS сегодня!</h1>
+      <p class="lead mb-4">Погрузись в мир веб-разработки с нашим курсом. Мы предлагаем понятные уроки, практические задания и качественные материалы.</p>
+      <a href="feedback.html" class="btn btn-light btn-lg px-4 me-2">
+        <i class="bi bi-envelope me-1"></i> Обратная связь
+      </a>
+      <a href="#courses" class="btn btn-outline-light btn-lg px-4">
+        <i class="bi bi-arrow-down me-1"></i> Узнать больше
+      </a>
+    </div>
+  </section>
+
+  <!-- Раздел "О курсе" -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">О курсе</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>
+            Наш курс по HTML и CSS разработан как для начинающих, так и для тех, кто хочет углубить свои знания. Мы предлагаем структурированные уроки, демонстрационные примеры и практические задания, чтобы вы могли создавать современные сайты с нуля.
+          </p>
+          <p>
+            Изучив эти языки разметки, вы получите прочную базу для дальнейшего освоения JavaScript, а также других технологий веб-разработки.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <!-- Место для изображения -->
+          <img src="https://via.placeholder.com/500x300" alt="Обучение HTML и CSS" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Раздел "Уроки" -->
+  <section id="courses" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Наши уроки</h2>
+      <div class="row g-4">
+      
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Основы HTML">
+            <div class="card-body">
+              <h3 class="card-title">Основы HTML</h3>
+              <p class="card-text">Узнайте, как создавать структуру веб-страниц с помощью HTML. Практические примеры и советы по семантике.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Основы CSS">
+            <div class="card-body">
+              <h3 class="card-title">Основы CSS</h3>
+              <p class="card-text">Научитесь оформлять страницы с помощью CSS — от простых стилей до анимаций и адаптивного дизайна.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Верстка и практические задания">
+            <div class="card-body">
+              <h3 class="card-title">Практическая верстка</h3>
+              <p class="card-text">Примените полученные знания для создания настоящих веб-страниц. Практические проекты и современные методики.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <h5>
+            <i class="bi bi-code-slash me-2"></i>HTML & CSS School
+          </h5>
+          <p class="text-muted">Обучение веб-разработке с нуля</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="mb-3">
+            <a href="#" class="text-decoration-none me-3"><i class="bi bi-github fs-4"></i></a>
+            <a href="#" class="text-decoration-none me-3"><i class="bi bi-twitter fs-4"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-telegram fs-4"></i></a>
+          </div>
+          <p class="mb-0 text-muted">© 2023 HTML & CSS School. Все права защищены.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Общие скрипты -->
+  <script src="script.js"></script>
 </body>
 </html>
+
