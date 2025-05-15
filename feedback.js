@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('feedbackForm');
     const emailField = document.getElementById('email');
+    const userNameInput = document.getElementById('name');
+    const userNamePlaceholder = document.getElementById('userNamePlaceholder');
     
     if (form) {
         // Валидация email при вводе
@@ -18,7 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
             event.stopPropagation();
             
             if (form.checkValidity()) {
-                // Если форма валидна, показываем модальное окно
+                // Устанавливаем имя пользователя в модальное окно
+                userNamePlaceholder.textContent = userNameInput.value.trim() || 'пользователь';
+                
+                // Показываем модальное окно
                 const modal = new bootstrap.Modal(document.getElementById('successModal'));
                 modal.show();
                 
