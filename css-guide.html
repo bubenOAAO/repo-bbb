@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Руководство по CSS</title>
-    <!-- Те же подключения что и в index.html -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Навигация (как в index.html) -->
-    
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-code-square me-2"></i>HTML/CSS Tutor
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html-guide.html">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="css-guide.html">CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">Обратная связь</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <main class="container my-5">
         <div class="row">
             <div class="col-lg-8 mx-auto">
@@ -17,26 +45,71 @@
                 
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h2>Основы CSS</h2>
+                        <h2><i class="bi bi-palette me-2"></i>Основы CSS</h2>
                         <p>CSS (Cascading Style Sheets) - это язык стилей, определяющий отображение HTML-документов.</p>
-                        <pre><code>body {
+                        <div class="bg-light p-3 rounded mb-3">
+                            <pre class="mb-0"><code>/* Изменение цвета текста и фона */
+body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     color: #333;
 }
 
+/* Стили для заголовка */
 h1 {
     color: #007bff;
     text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Стили для кнопок */
+.button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
 }</code></pre>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Другие разделы руководства -->
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2><i class="bi bi-layout-three-columns me-2"></i>Flexbox</h2>
+                        <p>Flexbox - это современная модель макета для создания гибких структур.</p>
+                        <div class="bg-light p-3 rounded mb-3">
+                            <pre class="mb-0"><code>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    flex: 1;
+    margin: 0 10px;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    
-    <!-- Футер (как в index.html) -->
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>HTML/CSS Tutor</h5>
+                    <p>Бесплатные уроки по веб-разработке</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="feedback.html" class="btn btn-outline-light">Обратная связь</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
