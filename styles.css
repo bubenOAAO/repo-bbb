@@ -51,3 +51,9 @@ footer {
     background-color: #333;
     color: #fff;
 }
+
+.nav-link:hover,
+.btn-outline-light:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
